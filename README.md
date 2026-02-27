@@ -142,4 +142,4 @@ See [ARCHITECTURE.md](ARCHITECTURE.md) for detailed design documentation.
 
 ## License
 
-MIT — [Onyx Digital Intelligence Development LLC](https://onyxdigital.dev)
+GPL-3.0 — [Onyx Digital Intelligence Development LLC](https://onyxdigital.dev)
