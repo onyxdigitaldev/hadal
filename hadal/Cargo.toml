@@ -28,8 +28,8 @@ serde.workspace = true
 dirs.workspace = true
 
 [package.metadata.deb]
-maintainer = "Hadal Contributors"
-copyright = "2025-2026, Hadal Contributors"
+maintainer = "Onyx Digital Intelligence Development LLC <oskodiak@onyxdigital.dev>"
+copyright = "2025-2026, Onyx Digital Intelligence Development LLC"
 license-file = ["../LICENSE-MIT", "0"]
 extended-description = """An audiophile-grade terminal music player for Linux. \
 Supports FLAC, MP3, AAC, Ogg Vorbis, Opus, WAV, and AIFF. \

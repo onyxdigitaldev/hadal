@@ -13,9 +13,10 @@ members = [
 [workspace.package]
 version = "0.1.0"
 edition = "2021"
-authors = ["Hadal Contributors"]
-license = "MIT OR Apache-2.0"
-repository = "https://github.com/anthropics/hadal"
+authors = ["Onyx Digital Intelligence Development LLC <oskodiak@onyxdigital.dev>"]
+license = "MIT"
+repository = "https://github.com/onyxdigitaldev/hadal"
+homepage = "https://onyxdigital.dev"
 rust-version = "1.75"
 
 [workspace.dependencies]
