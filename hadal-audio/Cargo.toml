@@ -1,0 +1,20 @@
+[package]
+name = "hadal-audio"
+description = "Audio decoding and playback engine for Hadal music player"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+hadal-common.workspace = true
+hadal-dsp.workspace = true
+
+symphonia.workspace = true
+ringbuf.workspace = true
+rubato.workspace = true
+
+thiserror.workspace = true
+tracing.workspace = true
+parking_lot.workspace = true

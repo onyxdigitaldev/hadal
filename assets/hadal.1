@@ -1,0 +1,57 @@
+.TH HADAL 1 "2026-02-25" "hadal 0.1.0" "User Commands"
+.SH NAME
+hadal \- audiophile-grade terminal music player for Linux
+.SH SYNOPSIS
+.B hadal
+[\fIOPTIONS\fR] [\fIPATH\fR]
+.SH DESCRIPTION
+.B Hadal
+is a terminal-based music player designed for audiophile-quality playback.
+It supports FLAC, MP3, AAC, Ogg Vorbis, Opus, WAV, AIFF, and ALAC formats.
+Features include a 10-band parametric equalizer, real-time spectrum analyzer
+and VU meters, album art via the Kitty image protocol, and a ranger-style
+library browser.
+.PP
+Named after the hadal zone \(em the deepest oceanic trenches \(em where only
+the purest signals reach.
+.SH OPTIONS
+.TP
+.B \-c, \-\-config \fIFILE\fR
+Path to configuration file. Defaults to
+.IR ~/.config/hadal/config.toml .
+.TP
+.B \-d, \-\-debug
+Enable debug logging to
+.IR ~/.cache/hadal/hadal.log .
+.TP
+.B \-\-scan
+Force library scan on startup.
+.TP
+.B \-\-list\-devices
+List available audio output devices and exit.
+.TP
+.B \-\-version\-info
+Print detailed version and build information.
+.SH FILES
+.TP
+.I ~/.config/hadal/config.toml
+Main configuration file.
+.TP
+.I ~/.config/hadal/keybindings.toml
+Custom keybinding overrides.
+.TP
+.I ~/.local/share/hadal/library.db
+Music library SQLite database.
+.TP
+.I ~/.local/share/hadal/eq_state.toml
+Persisted equalizer state.
+.TP
+.I ~/.local/share/hadal/playlists.db
+Playlist database.
+.TP
+.I ~/.cache/hadal/hadal.log
+Application log file.
+.SH AUTHORS
+Hadal Contributors
+.SH LICENSE
+MIT OR Apache-2.0

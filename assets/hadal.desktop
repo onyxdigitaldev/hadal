@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Hadal
+Comment=Audiophile-grade TUI music player
+Exec=hadal
+Icon=hadal
+Terminal=true
+Type=Application
+Categories=Audio;Music;Player;
+Keywords=music;audio;player;flac;audiophile;

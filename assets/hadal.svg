@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="trench" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a5bc7"/>
+      <stop offset="100%" stop-color="#0e1a42"/>
+    </linearGradient>
+  </defs>
+
+  <!--
+    11 bars, each 8px wide with 2px gap = 10px pitch
+    Total width: 11 * 8 + 10 * 2 = 108px
+    Left offset: (128 - 108) / 2 = 10px
+    Bars descend from y=12, deepest at center (trench profile)
+  -->
+
+  <!-- Left slope -->
+  <rect x="10"  y="12" width="8" height="16" rx="2" fill="#3a5bc7" opacity="0.5"/>
+  <rect x="20"  y="12" width="8" height="26" rx="2" fill="#3a5bc7" opacity="0.6"/>
+  <rect x="30"  y="12" width="8" height="40" rx="2" fill="#2e4db5" opacity="0.7"/>
+  <rect x="40"  y="12" width="8" height="56" rx="2" fill="#2240a0" opacity="0.8"/>
+  <rect x="50"  y="12" width="8" height="76" rx="2" fill="url(#trench)" opacity="0.9"/>
+
+  <!-- Center: deepest point of the trench -->
+  <rect x="60"  y="12" width="8" height="104" rx="3" fill="url(#trench)"/>
+
+  <!-- Right slope (mirror) -->
+  <rect x="70"  y="12" width="8" height="76" rx="2" fill="url(#trench)" opacity="0.9"/>
+  <rect x="80"  y="12" width="8" height="56" rx="2" fill="#2240a0" opacity="0.8"/>
+  <rect x="90"  y="12" width="8" height="40" rx="2" fill="#2e4db5" opacity="0.7"/>
+  <rect x="100" y="12" width="8" height="26" rx="2" fill="#3a5bc7" opacity="0.6"/>
+  <rect x="110" y="12" width="8" height="16" rx="2" fill="#3a5bc7" opacity="0.5"/>
+</svg>

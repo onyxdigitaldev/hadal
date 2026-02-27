@@ -1,0 +1,21 @@
+[package]
+name = "hadal-playlist"
+description = "Playlist management for Hadal music player"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+hadal-common.workspace = true
+hadal-library.workspace = true
+
+rusqlite.workspace = true
+tokio.workspace = true
+parking_lot.workspace = true
+
+thiserror.workspace = true
+tracing.workspace = true
+serde.workspace = true
+uuid.workspace = true

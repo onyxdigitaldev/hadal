@@ -1,0 +1,22 @@
+[package]
+name = "hadal-library"
+description = "Music library management and indexing for Hadal music player"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+hadal-common.workspace = true
+
+rusqlite.workspace = true
+lofty.workspace = true
+tokio.workspace = true
+image.workspace = true
+
+thiserror.workspace = true
+tracing.workspace = true
+serde.workspace = true
+parking_lot.workspace = true
+notify.workspace = true

@@ -1,0 +1,24 @@
+[package]
+name = "hadal-dsp"
+description = "Digital signal processing for Hadal music player"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+# FFT for spectrum analysis
+rustfft.workspace = true
+
+# Thread-safe data sharing
+parking_lot.workspace = true
+
+# Error handling
+thiserror.workspace = true
+
+# Logging
+tracing.workspace = true
+
+# Serialization for presets
+serde.workspace = true
