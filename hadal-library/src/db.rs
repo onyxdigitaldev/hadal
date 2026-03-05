@@ -366,12 +366,22 @@ impl Database {
              FROM tracks WHERE 1=1",
         );
 
-        if album_id.is_some() {
-            sql.push_str(" AND album_id = ?1");
+        let mut param_idx = 1;
+        let mut param_values: Vec<Box<dyn rusqlite::types::ToSql>> = Vec::new();
+
+        if let Some(aid) = album_id {
+            use std::fmt::Write;
+            let _ = write!(sql, " AND album_id = ?{}", param_idx);
+            param_values.push(Box::new(aid));
+            param_idx += 1;
         }
-        if artist_id.is_some() {
-            sql.push_str(" AND artist_id = ?2");
+        if let Some(aid) = artist_id {
+            use std::fmt::Write;
+            let _ = write!(sql, " AND artist_id = ?{}", param_idx);
+            param_values.push(Box::new(aid));
+            param_idx += 1;
         }
+        let _ = param_idx; // suppress unused warning
 
         sql.push_str(" ORDER BY disc_number, track_number, title COLLATE NOCASE");
 
@@ -385,7 +395,9 @@ impl Database {
         }
 
         let mut stmt = conn.prepare(&sql)?;
-        let rows = stmt.query_map(params![album_id, artist_id], Self::map_track_row)?;
+        let param_refs: Vec<&dyn rusqlite::types::ToSql> =
+            param_values.iter().map(|p| p.as_ref()).collect();
+        let rows = stmt.query_map(param_refs.as_slice(), Self::map_track_row)?;
 
         rows.collect::<Result<Vec<_>, _>>().map_err(Into::into)
     }

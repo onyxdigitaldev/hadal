@@ -7,6 +7,11 @@ authors.workspace = true
 license.workspace = true
 rust-version.workspace = true
 
+[features]
+default = ["watch"]
+watch = ["notify"]
+ios = []
+
 [dependencies]
 hadal-common.workspace = true
 
@@ -19,4 +24,4 @@ thiserror.workspace = true
 tracing.workspace = true
 serde.workspace = true
 parking_lot.workspace = true
-notify.workspace = true
+notify = { workspace = true, optional = true }
